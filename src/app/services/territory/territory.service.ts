@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { API } from 'src/app/constants';
+import { EnvService } from 'src/app/env.service';
 import { Territory } from 'src/app/interfaces/territory';
 
 @Injectable({
@@ -14,10 +14,10 @@ export class TerritoryService {
   private territory = new Subject<Territory>();
   territory$ = this.territory.asObservable();
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private env: EnvService) {}
 
   findOne(params: { territoryId: string }): Observable<Territory> {
-    const url = `${API}/cities/${params.territoryId}`
+    const url = `${this.env.apiUrl}/cities/${params.territoryId}`
     return this.http.get<{ city: Territory }>(url).pipe(
       map((res: { city: Territory }) => {
         return this.appendState(res.city)
@@ -26,7 +26,7 @@ export class TerritoryService {
   }
 
   findByName(name: string): Observable<Territory[]> {
-    const url = `${API}/cities?city_name=` + name;
+    const url = `${this.env.apiUrl}/cities?city_name=` + name;
 
     return this.http.get<{ cities: [] }>(url).pipe(
       map((res: { cities: [] }) => {

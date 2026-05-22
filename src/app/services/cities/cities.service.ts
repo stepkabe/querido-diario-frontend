@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, map, shareReplay } from 'rxjs/operators';
-import { API } from 'src/app/constants';
+import { EnvService } from 'src/app/env.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
@@ -10,11 +10,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class CitiesService {
   getAllObservableCache: Observable<any> | null = null;
-  constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
+  constructor(private http: HttpClient, private snackBar: MatSnackBar, private env: EnvService) {}
 
   getAll(): Observable<any> {
     if (!this.getAllObservableCache)
-      this.getAllObservableCache = this.http.get(`${API}/cities?levels=3`).pipe(
+      this.getAllObservableCache = this.http.get(`${this.env.apiUrl}/cities?levels=3`).pipe(
         map((data) => {
           return data;
         }),
