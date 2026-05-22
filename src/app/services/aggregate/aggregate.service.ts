@@ -3,13 +3,13 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { AggregateQuery, ResponseAggregate } from 'src/app/interfaces/aggregate';
-import { API } from 'src/app/constants';
+import { EnvService } from 'src/app/env.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AggregateService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private env: EnvService) {}
 
   /**
    * Handle Http operation that failed.
@@ -34,11 +34,11 @@ export class AggregateService {
 
     if (!territory_id) {
       queryParams = { state_code: state_code };
-      url = API + `/aggregates/${state_code}`;
+      url = this.env.apiUrl + `/aggregates/${state_code}`;
     } else {
       queryParams = { territory_id: territory_id };
       const encodedQueryString = new URLSearchParams(queryParams).toString();
-      url = API + `/aggregates/${state_code}?${encodedQueryString}`;
+      url = this.env.apiUrl + `/aggregates/${state_code}?${encodedQueryString}`;
     }
 
     return this.http.get<ResponseAggregate>(url).pipe(
