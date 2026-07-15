@@ -1,14 +1,5 @@
 {
   "blog": [
-{
-  "id": 65,
-  "title": "OKBR firma parceria com IME-USP para hospedar infraestrutura do Querido Diário",
-  "category": "Querido Diário nas Universidades",
-  "content": "<p><em>A cessão de infraestrutura terá prazo indefinido e também vale para outras iniciativas de conhecimento livre mantidas pela OKBR; saiba mais</em></p><hr /><p>No final de junho de 2026, a Open Knowledge Brasil (OKBR) firmou parceria com o Centro de Competência em Software Livre (CCSL) do Instituto de Matemática e Estatística da Universidade de São Paulo (IME-USP) para o fornecimento de infraestrutura tecnológica voltada à hospedagem e execução do "<a href=\"https://queridodiario.ok.org.br/\">Querido Diário</a>". </p><p>O Querido Diário é um projeto de software livre inovador que agrega os dados publicados em diários oficiais de municípios brasileiros, deixando essa informação fácil e acessível para a população. Para que isso ocorra, o QD conta com robôs raspadores, que acessam diariamente o diário oficial de um município e registram continuamente as informações ali contidas. Esses dados são então processados e disponibilizados, permitindo o acesso e pesquisa nos conteúdos armazenados.</p><p>Com a parceria, o CCSL compromete-se a disponibilizar recursos de computação (servidores, processamento e armazenamento), sem compensação financeira, tanto para viabilizar a operação do Querido Diário como também de outras iniciativas de conhecimento livre mantidas pela OKBR. A parceria tem prazo indeterminado e os códigos-fonte e materiais produzidos pela OKBR e hospedados no CCSL permanecem sob titularidade da OKBR ou de seus respectivos autores, devendo ser disponibilizados sob licenças de código aberto (ex: MIT, GPL, Apache) ou Creative Commons (no caso de conteúdos).</p><p>“Essa parceria é fundamental não só para diminuirmos os custos da operação e manter o QD no ar. Ela marca um posicionamento importante de retirar parte das nossas tecnologias de uma infraestrutura estrangeira de big tech, em um movimento que busca soberania tecnológica e valorização da colaboração universidade-sociedade civil”, explica Luti Guedes, diretor-executivo da OKBR.</p><h2>Apoie o Querido Diário!</h2><p>O Querido Diário tem uma campanha de financiamento coletivo aberta no Catarse, cujo objetivo é garantir a sustentabilidade do projeto, que atualmente se encontra subfinanciado. Precisamos de toda ajuda possível para que esse projeto, que já foi premiado e reconhecido nacional e internacionalmente, continue existindo!</p><p>"<a href=\"https://www.catarse.me/queridodiario-okbr\">"Saiba mais e faça sua contribuição!</a>"</p>",
-  "banner": "https://ok.org.br/wp-content/uploads/2026/07/blog-qd-65.png",
-  "date": "07/15/2026",
-  "author": "Kim Abe"
-},
     {
   "id": 64,
   "title": "Parceria com estudantes do IME-USP desenvolverá Querido Diário para Estados",
